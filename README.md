@@ -1,4 +1,4 @@
-TroyWarr.github.io
+troywarr.github.io
 ==================
 
 GitHub Pages user site.
