@@ -14,13 +14,6 @@
   <body>
     <h1>window.postMessage() Test</h1>
     <input type="image" src="https://promotions.spredfast.com/file/1/618889" class="canvas-submit submit required" name="submit" value="Submit"/>
-    <script>
-      var submit = document.getElementsByClassName('canvas-submit')[0],
-          sendMessage = function () {
-            window.parent.postMessage('Hello from form!', 'http://s.codepen.io');
-            console.log('message sent');
-          };
-      submit.addEventListener('click', sendMessage);
-    </script>
+    <script src="./sender.js"></script>
   </body>
 </html>
