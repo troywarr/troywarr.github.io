@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>window.postMessage() Test (Sender)</title>
     <meta name="viewport" content="width=device-width"/>
+    <style>
+      h1 {
+        font: 18px/1.4 Arial, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <h1>window.postMessage() Test (Sender)
+    <h1>window.postMessage() Test (Sender)</h1>
+    <input type="image" src="https://promotions.spredfast.com/file/1/618889" class="canvas-submit submit required" name="submit" value="Submit"/>
     <script>
-      alert(1);
+      var submit = document.getElementsByClassName('canvas-submit')[0],
+          sendMessage = function () {
+            window.top.postMessage('Hello from sender!', 'http://s.codepen.io');
+            console.log('message sent from sender');
+          };
+      submit.addEventListener('click', sendMessage);
     </script>
   </body>
 </html>
