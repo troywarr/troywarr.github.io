@@ -17,7 +17,7 @@
     <script>
       var submit = document.getElementsByClassName('canvas-submit')[0],
           sendMessage = function () {
-            window.top.postMessage('Hello from sender!', 'http://s.codepen.io');
+            window.parent.postMessage('Hello from sender!', 'http://s.codepen.io');
             console.log('message sent from sender');
           };
       submit.addEventListener('click', sendMessage);
