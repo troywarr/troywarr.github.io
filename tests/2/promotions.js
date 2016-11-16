@@ -5,6 +5,7 @@ $('form').submit(function () {
       $submitIcon = $('.canvas-submit-icon'), // submit button in Promotions form
       checkSubmitIcon = function () {
         if ($submitIcon.css('display') === 'block') { // if submit loader is showing
+          clearInterval(interval); // stop checking
           window.parent.postMessage('submitted', origin); // send success message to parent page
           console.log('message sent');
           console.log(origin);
