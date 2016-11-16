@@ -6,4 +6,4 @@ var submit = document.getElementsByClassName('canvas-submit')[0],
       console.log('message sent');
       console.log(origin);
     };
-submit.addEventListener('click', sendMessage);
+submit.addEventListener('canvas_submit', sendMessage);
