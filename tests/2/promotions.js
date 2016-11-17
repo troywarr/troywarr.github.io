@@ -12,6 +12,9 @@ $('form').submit(function () {
       },
       interval = setInterval(checkSubmitIcon, 100); // check every 1/10th second
 
+  console.log(1);
+  console.log(location);
+
   checkSubmitIcon(); // check initially
   setTimeout(function () { // check for up to 2 seconds
     clearInterval(interval);
