@@ -7,7 +7,7 @@ $('form').submit(function () {
         console.log($submitIcon.css('display'));
         if ($submitIcon.css('display') === 'block') { // if submit loader is showing
           clearInterval(interval); // stop checking
-          window.parent.postMessage('submitted', origin); // send success message to parent page
+          top.postMessage('submitted', origin); // send success message to parent page
           console.log('message sent');
           console.log(origin);
         }
@@ -16,6 +16,7 @@ $('form').submit(function () {
 
   console.log(1);
   console.log(location);
+  console.log(origin);
 
   checkSubmitIcon(); // check initially
   setTimeout(function () { // check for up to 2 seconds
