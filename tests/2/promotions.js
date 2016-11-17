@@ -5,7 +5,7 @@ $('form').submit(function () {
       checkSubmitIcon = function () {
         console.log(2);
         console.log($submitIcon.css('display'));
-        if ($submitIcon.css('display') === 'block') { // if submit loader is showing
+        if ($submitIcon.css('display') !== 'none') { // if submit loader is showing
           console.log(origin);
           clearInterval(interval); // stop checking
           top.postMessage('submitted', origin); // send success message to parent page
