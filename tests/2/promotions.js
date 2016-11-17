@@ -1,7 +1,6 @@
 $('form').submit(function () {
 
-  var originParts = decodeURIComponent(location.search.slice(1)).split('/'),
-      origin = `${originParts[0]}//${originParts[2]}`,
+  var origin = decodeURIComponent(location.search.slice(1)).split('&')[0],
       $submitIcon = $('.canvas-submit-icon'), // submit button in Promotions form
       checkSubmitIcon = function () {
         console.log(2);
