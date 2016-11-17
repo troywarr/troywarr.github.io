@@ -3,6 +3,8 @@ $('form').submit(function () {
   var origin = decodeURIComponent(location.search.slice(1)),
       $submitIcon = $('.canvas-submit-icon'), // submit button in Promotions form
       checkSubmitIcon = function () {
+        console.log(2);
+        console.log($submitIcon.css('display'));
         if ($submitIcon.css('display') === 'block') { // if submit loader is showing
           clearInterval(interval); // stop checking
           window.parent.postMessage('submitted', origin); // send success message to parent page
