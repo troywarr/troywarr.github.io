@@ -1,7 +1,6 @@
 $('form').submit(function () {
 
-  var originParts = document.referrer.split('/'), // URL of parent page
-      origin = originParts[0] + '//' + originParts[2],
+  var origin = location.search.slice(1),
       $submitIcon = $('.canvas-submit-icon'), // submit button in Promotions form
       checkSubmitIcon = function () {
         if ($submitIcon.css('display') === 'block') { // if submit loader is showing
