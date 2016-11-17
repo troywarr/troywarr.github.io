@@ -4,6 +4,7 @@ $('form').submit(function () {
       $submitIcon = $('.canvas-submit-icon'), // submit button in Promotions form
       checkSubmitIcon = function () {
         console.log(2);
+        console.log($submitIcon.css('display'));
         if ($submitIcon.css('display') === 'block') { // if submit loader is showing
           console.log(origin);
           clearInterval(interval); // stop checking
@@ -11,7 +12,7 @@ $('form').submit(function () {
           console.log('message sent');
         }
       },
-      interval = setInterval(checkSubmitIcon, 100); // check every 1/10th second
+      interval = setInterval(checkSubmitIcon, 200); // check every 1/5th second
 
   console.log(1);
   console.log(location);
